@@ -1,0 +1,18 @@
+try:
+    def collatz(check_number):
+        print(check_number) 
+        if check_number == 1:
+            return 
+        elif check_number %2 == 0: 
+            check_number //= 2
+            collatz(check_number)
+        elif check_number%2 == 1:
+            check_number = (3*check_number)+1
+            collatz(check_number)
+        else:
+            print('Enter a postive number')
+except ValueError:
+    print('Enter only integer number')
+        
+number = int(input('Enter a number'))
+collatz(number)
